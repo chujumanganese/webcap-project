@@ -1,0 +1,22 @@
+
+
+@media (max-width: 1098px) {
+    aside{
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+   :root{
+        --pad: 1em;
+   }
+   .tblu p{
+        text-align: justify;
+        hyphens: auto;
+   }
+}
+
+@media (max-width: 540px) {
+    nav ul{
+        display: none;
+    }
+}

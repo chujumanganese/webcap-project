@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul, li{
+    list-style-type: none;
+}
+:root{
+    --universal-padding: 1em;
+    --font: rgba(0, 0, 0, 0.679);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+nav{
+    padding-block: 1em;
+    padding-inline: var(--universal-padding);
+    background: #adc178;
+    box-shadow:inset 0px -2px grey;
+}
+nav ul{
+    width: fit-content;
+    margin-left: auto;
+    gap: 2em;
+    padding-inline: 2em 0;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.12rem;
+}
+nav input{
+    margin-left: auto;
+    width: 30%;
+    padding: 0.5em 2em;
+    border-radius: 16px;
+    outline: 0;
+    border: 1px solid grey;
+}
+nav .pimg{
+    border: 4px solid white;
+    border-radius: 50%;
+    padding: 0.3em 0.4em;
+}
+nav, nav .r, nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav li:first-child input{
+    width: 200px;
+    border: 1px solid olive;
+}
+nav ul li:hover{
+    color: white;
+}
+nav .r p{
+    color: var(--font);
+}
+nav .r h1{
+    font-size: 2rem;
+}
+.r h1 span{
+    color: orange;
+}
+nav p{
+    font-size: clamp(1em, 1.1em, 1.2em);
+}
+nav .m h1{
+    color: var(--font);
+}
+
+/* We are about to style the footer of the page.  */
+footer{
+    padding: var(--universal-padding);
+}
+footer hr{
+    border: 1px solid grey;
+}
+footer .footer-first_child{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5em;
+    justify-content: space-between;
+}
+.footer-first_child small, .footer-second_child h5{
+    line-height: 1.72;
+}
+footer .o{
+    flex: 1 1 200px;
+}
+footer h1 span {
+    color: olive;
+}
+footer p{
+    line-height: 1.62;
+}
+footer .footimg{
+    margin-block: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+footer li a{ /* note this place */
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-weight: 300;
+}
+footer img{
+    max-width: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+}
+footer .ok {
+    line-height: 1.62;
+    text-decoration: underline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+footer .socials li{
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.socials li:last-child{
+    font-size: 20px;
+    margin-left: 0.2em; 
+}
+.socials img {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0.5em;
+    box-sizing: content-box;
+}
+@media (min-width: 700px) {
+    :root{
+        --universal-padding: 4em;
+    }
+}
+
+@media screen and (max-width: 500px){
+    nav .r p{
+        display: none;
+    }
+    .aside h1{
+        width: 5ch;
+        overflow: hidden;
+    }
+}

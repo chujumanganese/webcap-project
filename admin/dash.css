@@ -1,0 +1,27 @@
+.filesystem{
+    padding: var(--pad);
+}
+.filesystem .text{
+    background: white;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.filesystem .down{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    row-gap: 1em;
+    height: 0;
+    overflow: hidden;
+}
+table .actioner{
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+}
+.actioner img{
+    cursor: pointer;
+}

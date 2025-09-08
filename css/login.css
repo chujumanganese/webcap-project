@@ -1,0 +1,102 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #90a955;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    padding-block: 2em 0;
+}
+.container h1{
+    margin-bottom: 1em;
+}
+h1, p{
+    text-align: center;
+    color: #132a13;
+}
+form{
+    background:#ecf39e;
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    box-shadow: 5px 5px 10px;
+    border-radius: 5px;
+}
+form input:not([type="checkbox"]){
+    width: 100%;
+    background: transparent;
+    height: 30px;
+    padding-inline: 0 1em;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+input::placeholder{
+    color:blue;
+}
+.collection, .collection .together{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.collection .together{
+    gap: 0.5em;
+}
+.together input{
+    height: 20px;
+    width: 20px;
+}
+button{
+    position: relative;
+    padding-inline: 1em;
+    padding-block: 0.5em;
+    font-family: inherit;
+    background: olive;
+    color: white;
+    text-shadow: 0 -0.1px grey;
+    outline: 0;
+    border: 0;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+form a{
+    text-decoration: none;
+    text-align: center;
+    background: var(--i);
+    color: white;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 6px;
+}
+#error-modal, #success{
+    background: white;
+    width: fit-content;
+    padding: 1em;
+    margin: 0 auto 0 auto;
+}
+#error-modal p{
+    color:  #800000;
+}
+#success p{
+    color: green;
+}
+form a:not(.tope){
+    animation: sl 2s linear;
+}
+
+@keyframes sl {
+    from{
+        transform: translateY(-80px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,20 @@
+use rizu;
+
+create table users(
+	id int AUTO_INCREMENT primary key,
+    username varchar(100) unique not null,
+    firstname varchar(150) not null, 
+    lastname varchar(150) not null,
+    email varchar(100) unique not null,
+    passwords varchar(250) not null,
+    date_created DateTime Default CURRENT_TIMESTAMP
+);
+
+create table posts(
+	id int primary key AUTO_INCREMENT,
+    blogtitle varchar(200) not null,
+    blogdescription varchar(255) not null,
+    blogcategory varchar(121) not null, 
+    imagepath varchar(255) not null,
+    dates date DEFAULT CURRENT_DATE
+);

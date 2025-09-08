@@ -1,0 +1,333 @@
+@import url("common.css");
+@import url("media.css");
+
+*{
+    user-select: none;
+} 
+.centeres{ 
+    --back:#ccd5ae;
+    height: 90dvh;
+    padding: 2em var(--universal-padding, 1em);
+    line-height: 1.62;
+    background: var(--back);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.centeres .i{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin-right: auto;
+}
+.centeres h1{
+    --font-sh: clamp(2vmin,3rem, 3.5rem);
+
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: var(--font-sh);
+    /* color: rgba(128, 128, 128, 0.5); */
+}
+.centeres h1 .w{
+    --iop: white;
+    color: olive;
+    text-shadow: 1px 2px var(--iop), 
+                2px 4px  var(--iop),
+                3px 6px  var(--iop),
+                4px 8px  var(--iop),
+                5px 10px  var(--iop), 
+                6px 12px  var(--iop);
+}
+.centeres p::after{
+    content: "";
+    display: inline-block;
+    background: red;
+    width: 10px;
+    height: 10px;
+    margin-left: 0.3em;
+    animation: animr 1s infinite linear;
+}
+@keyframes animr {
+    100%{
+        transform: scale(1.5);
+    }
+}
+.centeres p{
+    font-size: clamp(0.89em, 1em, 1.023em) ;
+    max-width: 50ch;
+    transition: all 1s linear;
+    /* color: grey; */
+}
+.centeres .i, .centeres .ims{
+    flex: 1 0 300px;
+}
+.centeres .ims{
+    background-image:  url("../images/blog.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    box-shadow: 1px 1px 5px 2px grey;
+    height: 50dvh;
+    width: 100%;
+}
+
+hr.h{
+    margin-inline: var(--universal-padding);
+}
+
+/* This is for the center post of the page  */
+.upper_posts{
+    padding-inline: var(--universal-padding, 1em);
+    padding-block: 1em;
+    position: relative;
+}
+.posts{
+    --h: 70dvh;
+    display: flex;
+    align-items: center;
+    gap:2em;
+    overflow: scroll;
+    max-height:var(--h);
+    transition: all 2s ease-in-out;
+    padding-inline: 2em;
+    padding-block: 2em;
+    /* To hide and style the scroll bar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    /* scroll-padding: 0 1em; */
+}
+.posts .box{
+    scroll-snap-align: start;
+    cursor: pointer;
+    flex: 1 0 200px;
+    background-image: var(--image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 200px;
+    width: 250px;
+    color: white;
+    font-weight: 600;
+    padding: 1em;
+    font-size: 0.899rem;
+    display: inline-flex;
+    flex-direction: column;
+    background-color: rgb(151, 151, 151);
+    background-blend-mode: multiply;
+    border-radius: 16px;
+}
+.posts .box p{
+    margin-top: auto;
+    line-height: 1.62;
+}
+.box .bfoot{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: space-between;
+}
+.agboli{
+    position: absolute;
+    top: 50%;
+    padding: 0.4em 0.76em;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px 1px grey;
+    cursor: pointer;
+    z-index: 22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 950;
+    animation: r 2s infinite linear;
+}
+.agboli:not(.m){
+    left: 2.2em;
+}
+.agboli.m{
+    right: 2.2em;
+}
+@keyframes r{
+    to{
+        transform: scale(1.1);
+    }
+}
+/* this is the code for the rel blogs on the page  */
+.blogs{
+    padding-inline: var(--universal-padding);
+}
+.pagination{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    gap: 1em;
+    color: rgba(0, 0, 0, 0.734);
+}
+.pagination a{
+    text-align: center;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    flex: 1 0 0.5em;
+    height: fit-content;
+    background: #ccd5aeab;
+    cursor: pointer;
+}
+.blogger{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.blogger .boxx{
+    flex: 1 0 250px;
+    max-width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 5px 3px grey;
+    padding: 1em;
+    gap: 1em;
+}
+.boxx:hover{
+    background: lightgray;
+}
+.boxx h2{
+    font-size: 1.1rem;
+}
+.boxx p, .description{
+    font-size: 0.899rem;
+}
+.boxx .image{ /* This one of the containers */
+    height: 200px;
+    flex: 1 0 200px;
+    max-width: 250px;
+}
+.boxx .content{ /* This one of the containers */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-block: 1em;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-position: center;
+}
+.content .gat, .content .date{
+    padding-inline: 1em;
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+}
+.content .gat{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.content a{
+    color: green;
+}
+.content a:hover{
+    color: orange;
+}
+.category, .wraps{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title h4{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 21ch;
+    text-overflow: ellipsis;
+}
+.description{
+    line-height: 1.5;
+}
+.wraps{
+    gap: 1em;
+}
+.wraps .hat{
+    display: inline-block;
+    height: 20px;
+    width: 30px;
+    background: grey;
+    border: 0;
+    outline: 0;
+}
+.wraps .total{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+.foop {
+    display: flex;
+}
+.foop .group {
+    display: grid;
+    padding: 1em;
+    gap: 0.5em;
+    place-content: center;
+}
+.faq{
+    padding: 2em var(--universal-padding);
+    min-height: 30dvh;
+    display: flex;
+}
+.maner{
+    flex: 1 0 auto;
+}
+.c4i{
+    width: 200px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.c4i h1{
+    color: rgba(0, 0, 0, 0.466);
+}
+.c4i h1::first-letter{
+    color: brown;
+    margin-right: 0.1em;
+}
+.faq .hold{
+    border-bottom: 1px solid grey;
+    position: relative;
+}
+.hold .question{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    background: #e9edc9;
+}
+.hold .answer{
+    padding: 0.5em;
+    padding-left: 1em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.hold.a .answer{
+    top: 100%;
+    z-index: 1;
+}
+@media (max-width: 300px) {
+    .posts{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    
+}

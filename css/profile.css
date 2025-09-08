@@ -1,0 +1,6 @@
+@import url("./dashboard.css");
+
+section main{
+    --pad: 2em;
+    padding-inline: var(--pad);
+}
